@@ -44,7 +44,7 @@ const Navbar = () => {
     >
       <div className="flex gap-4 pt-2 ml-5 md:hidden">
         <div className="flex ">
-          <span>USD</span>
+          <span>INR</span>
           <KeyboardArrowDownIcon />
         </div>
         <div>

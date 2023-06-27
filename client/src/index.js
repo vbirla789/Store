@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import "./index.css";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import { Toaster } from "react-hot-toast";
 
 const Layout = () => {
   return (
@@ -44,7 +45,10 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Provider store={store}>
-    <RouterProvider router={router} />
-  </Provider>
+  <React.StrictMode>
+    <Provider store={store}>
+      <Toaster position="top-center" reverseOrder={false} />
+      <RouterProvider router={router} />
+    </Provider>
+  </React.StrictMode>
 );

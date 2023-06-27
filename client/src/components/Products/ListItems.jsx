@@ -22,7 +22,7 @@ const ListItems = ({ id, img1, title, price }) => {
         </div>
         <h2 className="font-normal">{title}</h2>
         <div className="prices">
-          <h3>${price}</h3>
+          <h3>₹{price}</h3>
         </div>
         <button
           className="bg-slate-900 text-white rounded py-2"

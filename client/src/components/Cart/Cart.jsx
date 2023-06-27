@@ -25,7 +25,7 @@ const Cart = () => {
       <div className="absolute , bottom-10">
         <div className="flex justify-between w-[60vh]">
           <h1>Subtotal</h1>
-          <span className="mr-10">${totalAmount}</span>
+          <span className="mr-10">₹{totalAmount}</span>
         </div>
         <div>
           <button className="bg-slate-900 text-white px-4 py-1 mb-0 mt-5 rounded">

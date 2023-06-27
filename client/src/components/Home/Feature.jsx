@@ -27,11 +27,11 @@ const Feature = ({ ifExists, featureData: { head1, items } }) => {
       {head1.map((val, i) => (
         <div className="flex gap-10 py-20">
           <div className="w-[90vh] flex justify-center items-center">
-            <h1 className="text-gray-600 text-xl font-bold">
+            <h1 className="text-gray-600 text-2xl font-bold">
               {ifExists ? val.title1 : val.title2}
             </h1>
           </div>
-          <div className="w-[100vh] text-[#777]">
+          <div className="w-[100vh] text-[#777] text-lg">
             <p className="font-semibold">{val.desc}</p>
           </div>
         </div>
