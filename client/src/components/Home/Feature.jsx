@@ -1,0 +1,53 @@
+import React from "react";
+
+import { SplideSlide, Splide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import Items from "../../utils/Items";
+
+const Feature = ({ ifExists, featureData: { head1, items } }) => {
+  const splideOptions = {
+    perPage: 4,
+    perMove: 1,
+    type: "loop",
+    rewind: true,
+    keyboard: "global",
+    gap: "0rem",
+    pagination: false,
+    padding: "0rem",
+    breakpoints: {
+      1200: { perPage: 3 },
+      991: { perPage: 2.3 },
+      768: { perPage: 2 },
+      500: { perPage: 1.3 },
+      425: { perPage: 1 },
+    },
+  };
+  return (
+    <div className="flex flex-col">
+      {head1.map((val, i) => (
+        <div className="flex gap-10 py-20">
+          <div className="w-[90vh] flex justify-center items-center">
+            <h1 className="text-gray-600 text-xl font-bold">
+              {ifExists ? val.title1 : val.title2}
+            </h1>
+          </div>
+          <div className="w-[100vh] text-[#777]">
+            <p className="font-semibold">{val.desc}</p>
+          </div>
+        </div>
+      ))}
+
+      <div className="pl-[40vh] w-[200vh] pb-10">
+        <Splide options={splideOptions}>
+          {items.map((data, i) => (
+            <SplideSlide>
+              <Items key={i} {...data} ifExists={ifExists} />
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
+    </div>
+  );
+};
+
+export default Feature;
