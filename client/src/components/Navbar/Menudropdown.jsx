@@ -10,25 +10,25 @@ const Menudropdown = () => {
         <Link to="products/1">Men</Link>
       </div>
       <div>
-        <Link to="products/1">Women</Link>
+        <Link to="products/2">Women</Link>
       </div>
       <div>
         <Link to="products/1">Children</Link>
       </div>
       <div>
-        <Link to="products/1">Accesories</Link>
+        <Link to="products/2">Accesories</Link>
       </div>
       <div>
         <Link to="products/1">Home</Link>
       </div>
       <div>
-        <Link to="products/1">About</Link>
+        <Link to="products/2">About</Link>
       </div>
       <div>
         <Link to="products/1">Contact</Link>
       </div>
       <div>
-        <Link to="products/1">Stores</Link>
+        <Link to="products/2">Stores</Link>
       </div>
     </nav>
   );

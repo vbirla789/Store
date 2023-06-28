@@ -12,7 +12,7 @@ const Hero = () => {
     <div>
       <Splide>
         <SplideSlide>
-          <img src={data[0]} className="h-[100vh] w-[100%]" />
+          <img src={data[0]} className="h-[100vh] w-[100%] " />
         </SplideSlide>
         <SplideSlide>
           <img src={data[1]} className="h-[100vh] w-[100%]" />

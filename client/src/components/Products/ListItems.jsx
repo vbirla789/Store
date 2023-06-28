@@ -14,7 +14,7 @@ const ListItems = ({ id, img1, title, price }) => {
 
   return (
     <section key={id}>
-      <div className="w-[35vh] flex flex-col ">
+      <div className="w-[35vh] flex flex-col md:w-[20vh] md:h-[10vh] md:mb-[32vh]">
         <div className="image">
           <NavLink to={`/product/${id}`}>
             <img src={img1} alt="" className="mainImg" />

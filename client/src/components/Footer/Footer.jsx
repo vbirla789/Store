@@ -8,7 +8,7 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 const Footer = () => {
   return (
     <div className=" py-10 text-[#777] bg-[#E4E4E4]">
-      <div className="flex md:flex-col gap-5 mx-[30vh]">
+      <div className="flex md:flex-col md:mx-auto md:ml-5 gap-5 mx-[30vh]">
         <div className="flex flex-col w-[40vh]">
           <h1 className="text-slate-700 text-lg font-medium">Categories</h1>
           <span>Men</span>
@@ -49,8 +49,10 @@ const Footer = () => {
         <YouTubeIcon fontSize="large" />
         <PinterestIcon fontSize="large" />
       </div>
-      <div className="flex items-center justify-center gap-5 ml-10 mx-[24vh] pb-10">
-        <h1 className="text-3xl font-semibold text-slate-700">Store</h1>
+      <div className="flex items-center justify-center gap-5 ml-10 mx-[24vh] pb-10 md:gap-10">
+        <h1 className="text-3xl font-semibold text-slate-700 md:ml-20">
+          Store
+        </h1>
         <span>
           The content of this site is copyright-protected and is the property of
           Store & Mauritz AB.

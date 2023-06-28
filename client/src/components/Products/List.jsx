@@ -3,8 +3,8 @@ import ListItems from "./ListItems";
 
 const List = ({ data: { id, img, head, imgData, items } }) => {
   return (
-    <div>
-      <div className="relative">
+    <div className="min-h-[150vh]">
+      <div className="relative md:hidden">
         <div>
           <img src={img} className="w-[130vh]  h-[120vh]" />
         </div>
@@ -21,12 +21,12 @@ const List = ({ data: { id, img, head, imgData, items } }) => {
         ))}
       </div>
       {head.map((val, i) => (
-        <div className="flex items-center justify-center flex-col w-[130vh] gap-10 mt-10 text-slate-700">
-          <h1 className="text-5xl font-semibold">{val.title}</h1>
+        <div className="flex items-center justify-center flex-col w-[130vh] gap-10 mt-10 text-slate-700 md:w-[40vh] md:ml-5">
+          <h1 className="text-5xl font-semibold md:text-4xl ">{val.title}</h1>
           <p className="font-normal">{val.desc}</p>
         </div>
       ))}
-      <div className="flex gap-2 my-10">
+      <div className="flex gap-2  my-10 md:flex-wrap md:w-[50vh] md:gap-5 md:items-center md:justify-center ">
         {items.map((data, i) => (
           <ListItems {...data} />
         ))}

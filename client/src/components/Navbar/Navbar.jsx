@@ -38,7 +38,7 @@ const Navbar = () => {
     <div
       className={
         !navState
-          ? "z-50 flex gap-[30vh] absolute text-xl md:gap-[40vh] py-5 pl-10 md:pl-0"
+          ? "z-50 flex items-center gap-[30vh] absolute text-xl md:gap-[5vh] py-5 pl-10 md:pl-0"
           : "fixed top-0 left-0 right-0 h-[10vh] flex items-center justify-around md:justify-between z-50 bg-[#E4E4E4] opacity-80 text-xl"
       }
     >
@@ -63,7 +63,7 @@ const Navbar = () => {
       <div>
         <Link to="/">
           {" "}
-          <h1 className="text-4xl font-semibold md:pl-4">STORE</h1>
+          <h1 className="text-4xl font-semibold md:pt-2 md:pl-1">STORE</h1>
         </Link>
       </div>
       <div className="flex gap-4 pt-2 mr-5 ">
@@ -102,13 +102,13 @@ const Navbar = () => {
         <div
           className={
             isMenuOpen
-              ? "absolute top-[40vh] right-[50vh] hidden md:block"
+              ? "absolute top-[40vh] right-[50vh] hidden md:block md:right-[5vh] md:top-4"
               : "hidden"
           }
         >
           <RxCross1
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white"
+            className="text-black"
           />
         </div>
       </div>
