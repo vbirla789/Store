@@ -10,9 +10,12 @@ const ProductItem = ({ val: { id, img1, title, price } }) => {
     dispatch(addToCart(item));
   };
   return (
-    <div className="flex flex-row py-20 justify-center" key={id}>
-      <div className="flex gap-2 ml-10">
-        <img src={img1} className="w-[70vh] h-[100vh]" />
+    <div className="flex flex-row py-20 justify-center md:flex-col" key={id}>
+      <div className="flex gap-2 ml-10 md:ml-5">
+        <img
+          src={img1}
+          className="w-[70vh] h-[100vh] md:w-[50vh] md:h-[60vh]"
+        />
         {/* <img src={img1} className="w-[70vh] h-[100vh]" /> */}
       </div>
       <div className="flex flex-col ml-10 w-[65vh] mt-10">
@@ -21,7 +24,7 @@ const ProductItem = ({ val: { id, img1, title, price } }) => {
           <span className="text-2xl font-medium">${price}</span>
           <span>Green/White/Brown</span>
           <button
-            className="bg-slate-900 text-white py-3 rounded w-[100%]"
+            className="bg-slate-900 text-white py-3 rounded w-[100%] md:w-[70%]"
             onClick={addCart}
           >
             Add
