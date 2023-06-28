@@ -31,13 +31,13 @@ const Feature = ({ ifExists, featureData: { head1, items } }) => {
               {ifExists ? val.title1 : val.title2}
             </h1>
           </div>
-          <div className="w-[100vh] text-[#777] text-lg md:w-[45vh]">
+          <div className="w-[100vh] text-[#777] text-lg md:w-[50vh]">
             <p className="font-semibold">{val.desc}</p>
           </div>
         </div>
       ))}
 
-      <div className="pl-[40vh] w-[200vh] pb-10 md:pl-[10vh]">
+      <div className="pl-[40vh] w-[200vh] pb-10 md:pl-[8vh]">
         <Splide options={splideOptions}>
           {items.map((data, i) => (
             <SplideSlide>

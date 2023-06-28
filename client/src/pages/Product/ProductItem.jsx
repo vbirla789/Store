@@ -11,10 +11,10 @@ const ProductItem = ({ val: { id, img1, title, price } }) => {
   };
   return (
     <div className="flex flex-row py-20 justify-center md:flex-col" key={id}>
-      <div className="flex gap-2 ml-10 md:ml-5">
+      <div className="flex gap-2 ml-10 md:ml-7">
         <img
           src={img1}
-          className="w-[70vh] h-[100vh] md:w-[50vh] md:h-[60vh]"
+          className="w-[70vh] h-[100vh] md:w-[45vh] md:h-[60vh]"
         />
         {/* <img src={img1} className="w-[70vh] h-[100vh]" /> */}
       </div>
@@ -24,7 +24,7 @@ const ProductItem = ({ val: { id, img1, title, price } }) => {
           <span className="text-2xl font-medium">${price}</span>
           <span>Green/White/Brown</span>
           <button
-            className="bg-slate-900 text-white py-3 rounded w-[100%] md:w-[70%]"
+            className="bg-slate-900 text-white py-3 rounded w-[100%] md:w-[60%]"
             onClick={addCart}
           >
             Add
