@@ -17,9 +17,9 @@ const Feature = ({ ifExists, featureData: { head1, items } }) => {
     breakpoints: {
       1200: { perPage: 3 },
       991: { perPage: 2.3 },
-      768: { perPage: 2 },
-      500: { perPage: 1.3 },
-      425: { perPage: 1 },
+      768: { perPage: 3 },
+      500: { perPage: 4 },
+      425: { perPage: 4 },
     },
   };
   return (
@@ -37,7 +37,7 @@ const Feature = ({ ifExists, featureData: { head1, items } }) => {
         </div>
       ))}
 
-      <div className="pl-[40vh] w-[200vh] pb-10 md:pl-[8vh]">
+      <div className="pl-[40vh] w-[200vh] pb-10 md:pl-[2vh] md:w-[100vh]">
         <Splide options={splideOptions}>
           {items.map((data, i) => (
             <SplideSlide>

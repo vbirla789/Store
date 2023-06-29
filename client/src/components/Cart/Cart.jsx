@@ -17,7 +17,7 @@ const Cart = () => {
   }, [products, dispatch]);
 
   return (
-    <div className="absolute z-100 bg-[#E4E4E4] opacity-100 py-5 px-5  top-20 right-4 w-[60vh] flex flex-col gap-10 min-h-[80vh] rounded ">
+    <div className="absolute z-100 bg-[#E4E4E4] opacity-100 py-5 px-5  top-20 right-4 w-[60vh] flex flex-col gap-10 min-h-[80vh] rounded md:w-[45vh]">
       <h1>Products in your cart</h1>
       {products?.map((item, i) => (
         <CartItems item={item} key={i} />

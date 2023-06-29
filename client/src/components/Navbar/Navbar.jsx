@@ -39,7 +39,7 @@ const Navbar = () => {
       className={
         !navState
           ? "z-50 flex items-center gap-[30vh] absolute text-xl md:gap-[5vh] py-5 pl-10 md:pl-5"
-          : "fixed top-0 left-0 right-0 h-[10vh] flex items-center justify-around md:justify-between z-50 bg-[#E4E4E4] opacity-80 text-xl"
+          : "sticky top-0 left-0 right-0 h-[10vh] flex items-center justify-around md:justify-between z-50 bg-[#E4E4E4] opacity-80 text-xl"
       }
     >
       <div className="flex gap-4 pt-2 ml-5 md:hidden">
