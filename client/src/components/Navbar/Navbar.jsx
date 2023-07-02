@@ -5,10 +5,11 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
 import Menudropdown from "./Menudropdown";
+import { data } from "../../data/data";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -34,12 +35,23 @@ const Navbar = () => {
     };
   }, []);
 
+  const [value, setValue] = useState("");
+
+  const onChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  const onSearch = (searchTerm) => {
+    setValue(searchTerm);
+    // console.log("search term", searchTerm);
+  };
+
   return (
     <div
       className={
         !navState
-          ? "z-50 flex items-center gap-[15vh] absolute text-xl md:gap-[5vh] py-5  md:pl-5 xl:pl-[20vh]"
-          : "sticky top-0 left-0 right-0 h-[10vh] flex items-center justify-around md:justify-between z-50 bg-[#E4E4E4] opacity-80 text-xl"
+          ? "z-50 flex items-center gap-[15vh] absolute text-lg md:gap-[5vh] py-5  md:pl-5 xl:pl-[20vh]"
+          : "sticky top-0 left-0 right-0 h-[10vh] flex items-center justify-around md:justify-between z-50 bg-[#E4E4E4] opacity-80 text-lg"
       }
     >
       <div className="flex gap-4 pt-2 ml-5 md:hidden">
@@ -63,11 +75,13 @@ const Navbar = () => {
       <div>
         <Link to="/">
           {" "}
-          <h1 className="text-4xl font-semibold md:pt-2 md:pl-1">STORE</h1>
+          <h1 className="text-3xl font-semibold md:pt-2 md:pl-1 lg:pl-10">
+            STORE
+          </h1>
         </Link>
       </div>
-      <div className="flex gap-4 pt-2 mr-5 ">
-        <div className="md:hidden">
+      <div className="flex gap-4 pt-2 items-center">
+        {/* <div className="md:hidden">
           <Link to="/">Home</Link>
         </div>
         <div className="md:hidden">
@@ -78,14 +92,39 @@ const Navbar = () => {
         </div>
         <div className="md:hidden">
           <Link>Stores</Link>
+        </div> */}
+        <div className="text-black flex ">
+          <input
+            placeholder="Search"
+            type="search"
+            value={value}
+            onChange={onChange}
+            className="rounded-full text-base px-4 py-1 w-[60vh] md:w-[30vh] mr-5  bg-[#807c77] opacity-70 outline-none"
+          />
+          <button onClick={() => onSearch(value)}>
+            <SearchIcon />
+          </button>
         </div>
+        <div className="absolute top-20 bg-[#807c77] opacity-80 px-4 rounded-md  w-[60vh] md:w-[30vh] ">
+          {data
+            .filter((item) => {
+              const searchTerm = value.toLowerCase();
+              const name = item.name.toLowerCase();
 
-        <div>
-          <SearchIcon fontSize="medium" />
+              return (
+                searchTerm && name.startsWith(searchTerm) && name !== searchTerm
+              );
+            })
+            .map((item) => (
+              <div onClick={() => onSearch(item.name)} key={item.id}>
+                <NavLink to={`/product/${item.id}`}>{item.name}</NavLink>
+              </div>
+            ))}
         </div>
+        {/* 
         <div>
           <PersonOutlineIcon fontSize="medium" />
-        </div>
+        </div> */}
         <div>
           <FavoriteBorderIcon fontSize="medium" />
         </div>

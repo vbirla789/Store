@@ -217,3 +217,10 @@ export const items = [
     price: 2400,
   },
 ];
+
+export const data = [
+  { name: "bread-necklace", id: 1 },
+  { name: "linen-trouser", id: 2 },
+  { name: "Oversized-tshirt", id: 3 },
+  { name: "cargo-trouser", id: 4 },
+];
