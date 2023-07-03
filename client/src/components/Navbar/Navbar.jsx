@@ -50,8 +50,8 @@ const Navbar = () => {
     <div
       className={
         !navState
-          ? "z-50 flex items-center gap-[15vh] absolute text-lg md:gap-[5vh] py-5  md:pl-5 xl:pl-[20vh]"
-          : "sticky top-0 left-0 right-0 h-[10vh] flex items-center justify-around md:justify-between z-50 bg-[#E4E4E4] opacity-80 text-lg"
+          ? "z-50 flex items-center gap-[15vh] absolute text-lg md:gap-[10vh] py-5  md:px-5 xl:pl-[20vh]"
+          : "sticky top-0 left-0 right-0 h-[10vh] flex items-center justify-around md:justify-between z-50 bg-[#E4E4E4] opacity-80 text-lg md:px-5"
       }
     >
       <div className="flex gap-4 pt-2 ml-5 md:hidden">
@@ -99,7 +99,7 @@ const Navbar = () => {
             type="search"
             value={value}
             onChange={onChange}
-            className="rounded-full text-base px-4 py-1 w-[60vh] md:w-[30vh] mr-5  bg-[#807c77] opacity-70 outline-none"
+            className="rounded-full text-base px-4 py-1 w-[60vh] md:w-[55vh] md:absolute top-[14vh] left-4 bg-[#807c77] opacity-70 outline-none md:bg-[#E4E4E4] md:opacity-80"
           />
           <button onClick={() => onSearch(value)}>
             <SearchIcon />
@@ -136,7 +136,7 @@ const Navbar = () => {
         </div>
         <div className="hidden md:block mt-1 ml-2">
           <RxHamburgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)} />
-          {isMenuOpen && <Menudropdown />}
+          {isMenuOpen && <Menudropdown isMenuOpen={isMenuOpen} />}
         </div>
         <div
           className={
