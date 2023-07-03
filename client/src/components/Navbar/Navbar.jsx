@@ -99,13 +99,13 @@ const Navbar = () => {
             type="search"
             value={value}
             onChange={onChange}
-            className="rounded-full text-base px-4 py-1 w-[60vh] md:w-[55vh] md:absolute top-[14vh] left-4 bg-[#807c77] opacity-70 outline-none md:bg-[#E4E4E4] md:opacity-80"
+            className="rounded-full text-base px-4 py-1 lg:mr-5 w-[60vh] md:w-[55vh] md:absolute top-[14vh] left-4 bg-[#807c77] opacity-50 outline-none md:bg-[#E4E4E4] md:opacity-80 placeholder-black"
           />
           <button onClick={() => onSearch(value)}>
             <SearchIcon />
           </button>
         </div>
-        <div className="absolute top-20 bg-[#807c77] opacity-80 px-4 rounded-md  w-[60vh] md:w-[30vh] ">
+        <div className="absolute top-20 bg-[#807c77] opacity-50 md:bg-[#E4E4E4] md:opacity-80 px-4 rounded-md  w-[60vh] md:w-[55vh] md:top-[22vh] md:right-5">
           {data
             .filter((item) => {
               const searchTerm = value.toLowerCase();

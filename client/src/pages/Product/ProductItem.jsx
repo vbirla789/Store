@@ -10,8 +10,8 @@ const ProductItem = ({ val: { id, img1, title, price } }) => {
     dispatch(addToCart(item));
   };
   return (
-    <div className="flex flex-row py-20 justify-center md:flex-col" key={id}>
-      <div className="flex gap-2 ml-10 md:ml-7">
+    <div className="flex flex-row py-40 justify-center md:flex-col" key={id}>
+      <div className="flex gap-2 ml-10 md:ml-10">
         <img
           src={img1}
           className="w-[70vh] h-[100vh] md:w-[45vh] md:h-[60vh]"
